@@ -1,5 +1,6 @@
-package kunde.rest;
+package kundenverwaltung.rest;
 
+/*
 import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 
@@ -10,23 +11,23 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
-//import kundenverwaltung.service.EmailExistsException;
-//import util.interceptor.Log;
-//import util.rest.Messages;
+import kundenverwaltung.service.KundeDeleteBestellungException;
+import util.interceptor.Log;
+import util.rest.Messages;
 
 
 @Provider
-//@Log
-public class EmailExistsExceptionMapper {//implements ExceptionMapper<EmailExistsException> {
-        @Context
+@Log*/
+public class KundeDeletBestellungExceptionMapper {//implements ExceptionMapper<KundeDeleteBestellungException> {
+        /*@Context
         private HttpHeaders headers;
         
-        //@Inject
-        //private Messages messages;
+        @Inject
+        private Messages messages;
         
-       /* @Override
-        public Response toResponse(EmailExistsException e) {
-                final String msg = messages.getMessage(headers, e.getMessageKey(), e.getEmail());
+        @Override
+        public Response toResponse(KundeDeleteBestellungException e) {
+                final String msg = messages.getMessage(headers, e.getMessageKey(), e.getKundeId(), e.getAnzahlBestellungen());
                 return Response.status(BAD_REQUEST)
                                .type(TEXT_PLAIN)
                                .entity(msg)

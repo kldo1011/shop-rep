@@ -1,4 +1,4 @@
-package kunde.domain;
+package kundenverwaltung.domain;
 
 public enum HobbyType {
     SPORT,

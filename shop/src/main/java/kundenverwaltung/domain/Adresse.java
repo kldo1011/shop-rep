@@ -1,4 +1,4 @@
-package kunde.domain;
+package kundenverwaltung.domain;
 
 import java.io.Serializable;
 
