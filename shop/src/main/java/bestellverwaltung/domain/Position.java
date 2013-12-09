@@ -1,5 +1,5 @@
 package bestellverwaltung.domain;
-
+/*
 import java.io.Serializable;
 import java.net.URI;
 
@@ -88,4 +88,4 @@ public class Position implements Serializable {
                 }
 
 
-}
+} */

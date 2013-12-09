@@ -1,5 +1,5 @@
 package bestellverwaltung.service;
-
+/*
 import util.AbstractShopException;
 
 
@@ -13,4 +13,4 @@ public abstract class AbstractBestellungServiceException extends AbstractShopExc
         public AbstractBestellungServiceException(String msg, Throwable t) {
                 super(msg, t);
         }
-}
+} */
