@@ -1,18 +1,22 @@
 package kundenverwaltung.service;
-/*
+
 import javax.ejb.ApplicationException;
 
-import de.shop.kundenverwaltung.domain.AbstractKunde;
+import kundenverwaltung.domain.AbstractKunde;
 
 
-/**
+/*
 * Exception, die ausgel&ouml;st wird, wenn ein Kunde gel&ouml;scht werden soll, aber mindestens eine Bestellung hat
-
+*/
 @ApplicationException(rollback = true)
 public class KundeDeleteBestellungException extends AbstractKundeServiceException {
-        private static final long serialVersionUID = 2237194289969083093L;
         
-        private static final String MESSAGE_KEY = "kunde.deleteMitBestellung";
+        
+        /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8334588056980922620L;
+		private static final String MESSAGE_KEY = "kunde.deleteMitBestellung";
         private final Long kundeId;
         private final int anzahlBestellungen;
         
@@ -34,4 +38,4 @@ public class KundeDeleteBestellungException extends AbstractKundeServiceExceptio
         public String getMessageKey() {
                 return MESSAGE_KEY;
         }
-} */
+} 

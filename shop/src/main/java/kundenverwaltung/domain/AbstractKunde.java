@@ -1,6 +1,4 @@
 package kundenverwaltung.domain;
-
-/*
 import java.io.Serializable;
 import java.net.URI;
 import java.util.List;
@@ -30,12 +28,16 @@ import bestellverwaltung.domain.Bestellung;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({
         @Type(value = Privatkunde.class, name = AbstractKunde.PRIVATKUNDE),
-        @Type(value = Firmenkunde.class, name = AbstractKunde.FIRMENKUNDE) })*/
-public abstract class AbstractKunde {//implements Serializable {
-        /*private static final long serialVersionUID = 7401524595142572933L;
+        @Type(value = Firmenkunde.class, name = AbstractKunde.FIRMENKUNDE) })
+public abstract class AbstractKunde implements Serializable {
         
         
-        public static final String PRIVATKUNDE = "P";
+        
+        /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1159067510416647514L;
+		public static final String PRIVATKUNDE = "P";
         public static final String FIRMENKUNDE = "F";
         
         //Pattern mit UTF-8 (statt Latin-1 bzw. ISO-8859-1) Schreibweise fuer Umlaute:
@@ -54,7 +56,7 @@ public abstract class AbstractKunde {//implements Serializable {
         
         @NotNull(message = "{kundenverwaltung.kunde.nachname.notNull}")
         @Size(min = NACHNAME_LENGTH_MIN, max = NACHNAME_LENGTH_MAX,
-              message = "{kundenverwaltung.kunde.nachname.length }")
+         message = "{kundenverwaltung.kunde.nachname.length }")
         @Pattern(regexp = NACHNAME_PATTERN, message = "{kundenverwaltung.kunde.nachname.pattern}")
         private String nachname;
         
@@ -208,5 +210,5 @@ public abstract class AbstractKunde {//implements Serializable {
                                 + ", nachname=" + nachname + ", email=" + email + ", adresse="
                                 + adresse + ", bestellungen=" + bestellungen
                                 + ", bestellungenUri=" + bestellungenUri + "]";
-        }*/
+        }
 }

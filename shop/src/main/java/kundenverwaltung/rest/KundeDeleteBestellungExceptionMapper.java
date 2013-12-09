@@ -1,6 +1,5 @@
 package kundenverwaltung.rest;
 
-/*
 import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 
@@ -17,9 +16,9 @@ import util.rest.Messages;
 
 
 @Provider
-@Log*/
-public class KundeDeletBestellungExceptionMapper {//implements ExceptionMapper<KundeDeleteBestellungException> {
-        /*@Context
+@Log
+public class KundeDeleteBestellungExceptionMapper implements ExceptionMapper<KundeDeleteBestellungException> {
+        @Context
         private HttpHeaders headers;
         
         @Inject
@@ -29,8 +28,8 @@ public class KundeDeletBestellungExceptionMapper {//implements ExceptionMapper<K
         public Response toResponse(KundeDeleteBestellungException e) {
                 final String msg = messages.getMessage(headers, e.getMessageKey(), e.getKundeId(), e.getAnzahlBestellungen());
                 return Response.status(BAD_REQUEST)
-                               .type(TEXT_PLAIN)
-                               .entity(msg)
-                               .build();
-        }*/
+                 .type(TEXT_PLAIN)
+                 .entity(msg)
+                 .build();
+        }
 }

@@ -1,18 +1,11 @@
 package artikelverwaltung.rest;
-/*
+
 import static util.Constants.SELF_LINK;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.APPLICATION_XML;
 import static javax.ws.rs.core.MediaType.TEXT_XML;
-
-
-//import java.lang.invoke.MethodHandles;
 import java.net.URI;
 import java.util.List;
-
-
-//import javax.annotation.PostConstruct;
-//import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
@@ -30,10 +23,6 @@ import javax.ws.rs.core.UriInfo;
 
 import artikelverwaltung.domain.*;
 import artikelverwaltung.service.ArtikelService;
-//import org.jboss.logging.Logger;
-//import de.shop.kundenverwaltung.domain.AbstractKunde;
-//import de.shop.artikelverwaltung.service.ArtikelService;
-//import de.shop.util.interceptor.Log;
 import util.rest.NotFoundException;
 import util.rest.UriHelper;
 
@@ -41,9 +30,9 @@ import util.rest.UriHelper;
 @Path("/artikel")
 @Produces({ APPLICATION_JSON, APPLICATION_XML + ";qs=0.75", TEXT_XML + ";qs=0.5" })
 @Consumes
-// @Log*/
+// @Log
 public class ArtikelResource {
-        /*@Context
+        @Context
         private UriInfo uriInfo;
       
         
@@ -117,6 +106,6 @@ public class ArtikelResource {
         @Produces
         public void updateArtikel(Artikel artikel) {
                 as.updateArtikel(artikel);
-        }*/
+        }
 
 }

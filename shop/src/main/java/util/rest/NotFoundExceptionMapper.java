@@ -10,14 +10,14 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
-//import util.interceptor.Log;
+import util.interceptor.Log;
 
 
 /**
 * @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
 */
 @Provider
-//@Log
+@Log
 public class NotFoundExceptionMapper implements ExceptionMapper<NotFoundException> {
         @Context
         private HttpHeaders headers;

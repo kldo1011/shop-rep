@@ -10,7 +10,7 @@ import javax.ws.rs.ext.Provider;
 
 import org.jboss.logging.Logger;
 
-//import util.interceptor.Log;
+import util.interceptor.Log;
 import util.AbstractShopException;
 
 
@@ -18,7 +18,7 @@ import util.AbstractShopException;
 * @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
 */
 @Provider
-//@Log
+@Log
 public class ShopExceptionMapper implements ExceptionMapper<AbstractShopException> {
         private static final Logger LOGGER = Logger.getLogger(MethodHandles.lookup().lookupClass());
         

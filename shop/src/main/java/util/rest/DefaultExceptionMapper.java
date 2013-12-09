@@ -18,7 +18,7 @@ import javax.ws.rs.ext.Provider;
 import org.jboss.resteasy.api.validation.ResteasyConstraintViolation;
 import org.jboss.resteasy.api.validation.ViolationReport;
 
-//import util.interceptor.Log;
+import util.interceptor.Log;
 
 /**
 * Konvertierung diverser Exceptions in eine halbwegs vernuenftige Fehlermeldungen,
@@ -30,7 +30,7 @@ import org.jboss.resteasy.api.validation.ViolationReport;
 * Ergaenzt um ViolationReport und ResteasyConstraintViolation
 */
 @Provider
-//@Log
+@Log
 public class DefaultExceptionMapper implements ExceptionMapper<Throwable> {
         @Override
         public Response toResponse(Throwable exception) {

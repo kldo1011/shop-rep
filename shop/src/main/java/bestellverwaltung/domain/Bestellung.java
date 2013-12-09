@@ -1,5 +1,4 @@
 package bestellverwaltung.domain;
-/*
 import java.io.Serializable;
 import java.net.URI;
 import java.util.GregorianCalendar;
@@ -17,15 +16,16 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import kundenverwaltung.domain.AbstractKunde;
 
-
+/**
+* @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
+*/
 @Entity
 @XmlRootElement
 public class Bestellung implements Serializable {
         
- 
-	private static final long serialVersionUID = -72497275447989909L;
+        private static final long serialVersionUID = 5786357922626501278L;
 
-		@Id
+        @Id
         @GeneratedValue
         @Basic(optional = false)
         private Long id;
@@ -124,4 +124,4 @@ public class Bestellung implements Serializable {
         public String toString() {
                 return "Bestellung [id=" + id + ", ausgeliefert=" + ausgeliefert + ", kundeUri=" + kundeUri + "]";
         }
-}*/
+}

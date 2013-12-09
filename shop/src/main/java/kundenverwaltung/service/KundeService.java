@@ -1,5 +1,5 @@
 package kundenverwaltung.service;
-/*
+
 import java.util.List;
 
 import javax.enterprise.context.Dependent;
@@ -49,13 +49,13 @@ public class KundeService {
                         return null;
                 }
                 //TODO passt das oder wie?
-                // Pruefung, ob die Email-Adresse schon existiert
+                /*// Pruefung, ob die Email-Adresse schon existiert
                 final AbstractKunde vorhandenerKunde = Mock.findKundeByEmail(kunde.getEmail());
 
                 // Gibt es die Email-Adresse bei einem anderen, bereits vorhandenen Kunden?
                 if (vorhandenerKunde.getId().longValue() != kunde.getId().longValue()) {
                         throw new EmailExistsException(kunde.getEmail());
-                }
+                }*/
                 
                 // TODO Datenbanzugriffsschicht statt Mock
                 Mock.updateKunde(kunde);
@@ -64,4 +64,4 @@ public class KundeService {
         }
 
         
-} */
+}

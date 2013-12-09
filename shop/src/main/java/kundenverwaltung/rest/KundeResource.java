@@ -1,10 +1,10 @@
 package kundenverwaltung.rest;
 
-/*import static util.Constants.ADD_LINK;
+import static util.Constants.ADD_LINK;
 import static util.Constants.FIRST_LINK;
 import static util.Constants.LAST_LINK;
-import static Constants.REMOVE_LINK;
-import static Constants.SELF_LINK;
+import static util.Constants.REMOVE_LINK;
+import static util.Constants.SELF_LINK;
 import static util.Constants.UPDATE_LINK;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.APPLICATION_XML;
@@ -43,11 +43,11 @@ import util.rest.NotFoundException;
 @Path("/kunden")
 @Produces({ APPLICATION_JSON, APPLICATION_XML + ";qs=0.75", TEXT_XML + ";qs=0.5" })
 @Consumes
-@RequestScoped*/
+@RequestScoped
 public class KundeResource {
         
         
-       /* public static final String KUNDEN_ID_PATH_PARAM = "kundeId";
+        public static final String KUNDEN_ID_PATH_PARAM = "kundeId";
         public static final String KUNDEN_NACHNAME_QUERY_PARAM = "nachname";
         
 
@@ -55,17 +55,17 @@ public class KundeResource {
         @Context
         private UriInfo uriInfo;
         
-        //@Inject
-       // private KundeService ks;
+        @Inject
+        private KundeService ks;
         
         //@Inject
         //private BestellungService bs;
         
-        //@Inject
-        //private BestellungResource bestellungResource;
+        @Inject
+        private BestellungResource bestellungResource;
                 
-        //@Inject
-       // private UriHelper uriHelper;
+        @Inject
+        private UriHelper uriHelper;
         
         @GET
         @Produces({ TEXT_PLAIN, APPLICATION_JSON })
@@ -101,8 +101,8 @@ public class KundeResource {
         
         public Link[] getTransitionalLinks(AbstractKunde kunde, UriInfo uriInfo) {
                 final Link self = Link.fromUri(getUriKunde(kunde, uriInfo))
-                                  .rel(SELF_LINK)
-                                  .build();
+         .rel(SELF_LINK)
+         .build();
                 
                 final Link add = Link.fromUri(uriHelper.getUri(KundeResource.class, uriInfo))
                              .rel(ADD_LINK)
@@ -159,8 +159,8 @@ public class KundeResource {
                 }
                 
                 final Link first = Link.fromUri(getUriKunde(kunden.get(0), uriInfo))
-                                   .rel(FIRST_LINK)
-                                   .build();
+         .rel(FIRST_LINK)
+         .build();
                 final int lastPos = kunden.size() - 1;
                 final Link last = Link.fromUri(getUriKunde(kunden.get(lastPos), uriInfo))
                               .rel(LAST_LINK)
@@ -184,12 +184,12 @@ public class KundeResource {
                         bestellungResource.setStructuralLinks(bestellung, uriInfo);
                 }
                 }*/
-              /*  return Response.ok(new GenericEntity<List<Bestellung>>(bestellungen) { })
+                return Response.ok(new GenericEntity<List<Bestellung>>(bestellungen) { })
                        .links(getTransitionalLinksBestellungen(bestellungen, kunde, uriInfo))
                        .build();
         }
         
-        private Link[] getTransitionalLinksBestellungen(List<Bestellung> bestellungen, 
+        private Link[] getTransitionalLinksBestellungen(List<Bestellung> bestellungen,
                                                                                                         AbstractKunde kunde, UriInfo uriInfo) {
                 if (bestellungen == null || bestellungen.isEmpty()) {
                         return new Link[0];
@@ -200,8 +200,8 @@ public class KundeResource {
                               .build();
                 
                 final Link first = Link.fromUri(bestellungResource.getUriBestellung(bestellungen.get(0), uriInfo))
-                                   .rel(FIRST_LINK)
-                                   .build();
+         .rel(FIRST_LINK)
+         .build();
                 final int lastPos = bestellungen.size() - 1;
                 
                 final Link last = Link.fromUri(bestellungResource.getUriBestellung(bestellungen.get(lastPos), uriInfo))
@@ -218,7 +218,7 @@ public class KundeResource {
                 kunde.getAdresse().setKunde(kunde);
                 kunde = ks.createKunde(kunde);
                 return Response.created(getUriKunde(kunde, uriInfo))
-                                   .build();
+                         .build();
         }
         
         @PUT
@@ -234,5 +234,5 @@ public class KundeResource {
         public void deleteKunde(@PathParam("id") Long kundeId) {
                 // TODO Anwendungskern statt Mock, Verwendung von Locale
                 //ks.deleteKunde(kundeId);
-        }*/
+        }
 }

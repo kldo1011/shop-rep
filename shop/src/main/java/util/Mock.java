@@ -1,19 +1,19 @@
 package util;
-/*
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.validation.Valid;
-import de.shop.artikelverwaltung.domain.Artikel;
-import de.shop.bestellverwaltung.domain.Bestellung;
-import de.shop.bestellverwaltung.domain.Position;
-import de.shop.kundenverwaltung.domain.AbstractKunde;
-import de.shop.kundenverwaltung.domain.Adresse;
-import de.shop.kundenverwaltung.domain.Firmenkunde;
-import de.shop.kundenverwaltung.domain.HobbyType;
-import de.shop.kundenverwaltung.domain.Privatkunde;
+import artikelverwaltung.domain.Artikel;
+import bestellverwaltung.domain.Bestellung;
+import bestellverwaltung.domain.Position;
+import kundenverwaltung.domain.AbstractKunde;
+import kundenverwaltung.domain.Adresse;
+import kundenverwaltung.domain.Firmenkunde;
+import kundenverwaltung.domain.HobbyType;
+import kundenverwaltung.domain.Privatkunde;
 
 public final class Mock {
         
@@ -97,20 +97,21 @@ public final class Mock {
         }
 
         public static Bestellung findBestellungById(Long id) {
-                if (id > MAX_ID) {
-                        return null;
-                }
-                final int it = id.intValue();
-                final AbstractKunde kunde = findKundeById(id + 1); // andere ID fuer den Kunden
+            if (id > MAX_ID) {
+                    return null;
+            }
+            final int it = id.intValue();
+            final AbstractKunde kunde = findKundeById(id + 1); // andere ID fuer den Kunden
 
-                final Bestellung bestellung = new Bestellung();
-                bestellung.setId(id);
-                bestellung.setAusgeliefert(false);
-                bestellung.setKunde(kunde);
-                 bestellung.setPositionen(findAllPositionen(it));
-                
-                return bestellung;
-        }
+            final Bestellung bestellung = new Bestellung();
+            bestellung.setId(id);
+            bestellung.setAusgeliefert(false);
+            bestellung.setKunde(kunde);
+            bestellung.setPositionen(findAllPositionen(it));
+             bestellung.setPositionen(findAllPositionen(it));
+            
+            return bestellung;
+    }
         
         public static List<Position> findAllPositionen(int id) {
           
@@ -171,7 +172,7 @@ public final class Mock {
                 /*final GregorianCalendar bestdat = best.getBestelldatum();
                 best.setBestelldatum(bestdat);*/
                 //TODO evt. Verbindung zu Posten herstellen (bzgl. POST)
-    /*    final long nummer = 11;
+        final long nummer = 11;
         best.setId(nummer);
         System.out.println("Neue Bestellung: " + best);
         return best;
@@ -190,7 +191,7 @@ public final class Mock {
                 /*if (id > MAX_ARTIKEL) {
 return null;
 }*/
-/*
+
         final Artikel artikel = new Artikel();
         
         artikel.setId(id);
@@ -209,9 +210,9 @@ return null;
          return artikelList;
         }
         
-        private Mock() { /**/ //}
+        private Mock() { /**/ }
 
-    /*    public static void updateArtikel(@Valid Artikel artikel) {
+        public static void updateArtikel(@Valid Artikel artikel) {
                 System.out.println("Aktualisierter Artikel: " + artikel);
         }
 
@@ -231,4 +232,4 @@ return null;
                 return pos;
         }
         
-} */
+}

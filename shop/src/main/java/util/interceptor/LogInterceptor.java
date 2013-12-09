@@ -1,4 +1,4 @@
-/*package util.interceptor;
+package util.interceptor;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -8,7 +8,7 @@ import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 
 import org.jboss.logging.Logger;
-*/
+
 
 /**
 * Interceptor zum Tracing von public-Methoden der CDI-faehigen Beans und der Session Beans.
@@ -16,7 +16,7 @@ import org.jboss.logging.Logger;
 * Level DEBUG protokolliert.
 * @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
 */
-/*
+
 @Interceptor
 @Log
 public class LogInterceptor implements Serializable {
@@ -98,11 +98,11 @@ public class LogInterceptor implements Serializable {
                 
                 return result;
         }
-      */  
+      
         /**
          * Collection oder Array oder Objekt in einen String konvertieren
          */
-/*
+
         private static String toString(Object obj) {
                 if (obj instanceof Collection<?>) {
                         // Collection: Elemente bei kleiner Anzahl ausgeben; sonst nur die Anzahl
@@ -124,11 +124,11 @@ public class LogInterceptor implements Serializable {
                 // Objekt, aber keine Collection und kein Array
                 return obj.toString();
         }
-        */
+        
         /**
          * Array in einen String konvertieren
          */
-/*
+
         private static String arrayToString(Object obj) {
                 final Class<?> componentClass = obj.getClass().getComponentType();
 
@@ -306,4 +306,4 @@ public class LogInterceptor implements Serializable {
 
                 return "<<UNKNOWN ARRAY>>";
         }
-}*/
+}

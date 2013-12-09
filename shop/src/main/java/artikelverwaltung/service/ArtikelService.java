@@ -1,6 +1,6 @@
 package artikelverwaltung.service;
 
-/*
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,12 +11,19 @@ import artikelverwaltung.domain.Artikel;
 import util.interceptor.Log;
 import util.Mock;
 
+/**
+* @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
+*/
 @Dependent
-@Log*/
-public class ArtikelService {//implements Serializable {
-       /* private static final long serialVersionUID = -5105686816948437276L;
+@Log
+public class ArtikelService implements Serializable {
         
-        private static final int MAX_ID = 10;
+        
+        /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3999583827375620473L;
+		private static final int MAX_ID = 10;
 
         @NotNull(message = "{artikel.notFound.id}")
         public Artikel findArtikelById(int id) {
@@ -40,5 +47,5 @@ public class ArtikelService {//implements Serializable {
         public void updateArtikel(Artikel artikel) {
                 
                 Mock.updateArtikel(artikel);
-        }*/
+        }
 }

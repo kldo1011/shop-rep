@@ -1,5 +1,5 @@
 package bestellverwaltung.service;
-/*
+
 import java.util.List;
 import javax.enterprise.context.Dependent;
 import javax.enterprise.event.Event;
@@ -51,4 +51,4 @@ public class BestellungService {
                         return pos;
                 }
                 
-} */
+} 

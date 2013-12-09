@@ -1,15 +1,15 @@
 package util.mail;
 
-/*import java.io.Serializable;
+import java.io.Serializable;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
-*/
+
 /**
 * @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
 */
-/*
+
 @ApplicationScoped
 public class Producers implements Serializable {
         private static final long serialVersionUID = 3916523726340426731L;
@@ -25,4 +25,4 @@ public class Producers implements Serializable {
         @Produces
         @AbsenderName
         private String absenderName;
-}*/
+}

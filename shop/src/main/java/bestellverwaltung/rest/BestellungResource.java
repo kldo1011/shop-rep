@@ -1,6 +1,6 @@
 package bestellverwaltung.rest;
-/*
-import static shop.util.Constants.SELF_LINK;
+
+import static util.Constants.SELF_LINK;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.APPLICATION_XML;
 import static javax.ws.rs.core.MediaType.TEXT_XML;
@@ -151,4 +151,4 @@ public class BestellungResource {
         
                 
         }
-} */
+} 
