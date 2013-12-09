@@ -1,5 +1,6 @@
 package kunde.domain;
 
+/*
 import java.io.Serializable;
 import java.net.URI;
 import java.util.List;
@@ -21,7 +22,7 @@ import org.codehaus.jackson.annotate.JsonSubTypes.Type;
 import org.codehaus.jackson.annotate.JsonTypeInfo;
 import org.hibernate.validator.constraints.Email;
 
-import de.shop.bestellverwaltung.domain.Bestellung;
+import bestellverwaltung.domain.Bestellung;
 
 @Entity
 @XmlRootElement
@@ -29,9 +30,9 @@ import de.shop.bestellverwaltung.domain.Bestellung;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({
         @Type(value = Privatkunde.class, name = AbstractKunde.PRIVATKUNDE),
-        @Type(value = Firmenkunde.class, name = AbstractKunde.FIRMENKUNDE) })
-public abstract class AbstractKunde implements Serializable {
-        private static final long serialVersionUID = 7401524595142572933L;
+        @Type(value = Firmenkunde.class, name = AbstractKunde.FIRMENKUNDE) })*/
+public abstract class AbstractKunde {//implements Serializable {
+        /*private static final long serialVersionUID = 7401524595142572933L;
         
         
         public static final String PRIVATKUNDE = "P";
@@ -207,5 +208,5 @@ public abstract class AbstractKunde implements Serializable {
                                 + ", nachname=" + nachname + ", email=" + email + ", adresse="
                                 + adresse + ", bestellungen=" + bestellungen
                                 + ", bestellungenUri=" + bestellungenUri + "]";
-        }
+        }*/
 }

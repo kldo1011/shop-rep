@@ -1,5 +1,6 @@
 package artikelverwaltung.service;
 
+/*
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,9 +12,9 @@ import util.interceptor.Log;
 import util.Mock;
 
 @Dependent
-@Log
-public class ArtikelService implements Serializable {
-        private static final long serialVersionUID = -5105686816948437276L;
+@Log*/
+public class ArtikelService {//implements Serializable {
+       /* private static final long serialVersionUID = -5105686816948437276L;
         
         private static final int MAX_ID = 10;
 
@@ -39,5 +40,5 @@ public class ArtikelService implements Serializable {
         public void updateArtikel(Artikel artikel) {
                 
                 Mock.updateArtikel(artikel);
-        }
+        }*/
 }

@@ -1,6 +1,6 @@
 package kunde.rest;
 
-import static util.Constants.ADD_LINK;
+/*import static util.Constants.ADD_LINK;
 import static util.Constants.FIRST_LINK;
 import static util.Constants.LAST_LINK;
 import static Constants.REMOVE_LINK;
@@ -43,11 +43,11 @@ import util.rest.NotFoundException;
 @Path("/kunden")
 @Produces({ APPLICATION_JSON, APPLICATION_XML + ";qs=0.75", TEXT_XML + ";qs=0.5" })
 @Consumes
-@RequestScoped
+@RequestScoped*/
 public class KundeResource {
         
         
-        public static final String KUNDEN_ID_PATH_PARAM = "kundeId";
+       /* public static final String KUNDEN_ID_PATH_PARAM = "kundeId";
         public static final String KUNDEN_NACHNAME_QUERY_PARAM = "nachname";
         
 
@@ -55,17 +55,17 @@ public class KundeResource {
         @Context
         private UriInfo uriInfo;
         
-        @Inject
-        private KundeService ks;
+        //@Inject
+       // private KundeService ks;
         
         //@Inject
         //private BestellungService bs;
         
-        @Inject
-        private BestellungResource bestellungResource;
+        //@Inject
+        //private BestellungResource bestellungResource;
                 
-        @Inject
-        private UriHelper uriHelper;
+        //@Inject
+       // private UriHelper uriHelper;
         
         @GET
         @Produces({ TEXT_PLAIN, APPLICATION_JSON })
@@ -184,7 +184,7 @@ public class KundeResource {
                         bestellungResource.setStructuralLinks(bestellung, uriInfo);
                 }
                 }*/
-                return Response.ok(new GenericEntity<List<Bestellung>>(bestellungen) { })
+              /*  return Response.ok(new GenericEntity<List<Bestellung>>(bestellungen) { })
                        .links(getTransitionalLinksBestellungen(bestellungen, kunde, uriInfo))
                        .build();
         }
@@ -234,5 +234,5 @@ public class KundeResource {
         public void deleteKunde(@PathParam("id") Long kundeId) {
                 // TODO Anwendungskern statt Mock, Verwendung von Locale
                 //ks.deleteKunde(kundeId);
-        }
+        }*/
 }
