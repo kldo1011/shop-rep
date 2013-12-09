@@ -209,7 +209,7 @@ return null;
          return artikelList;
         }
         
-        private Mock() { /**/ }
+        private Mock() { /**/ //}
 
     /*    public static void updateArtikel(@Valid Artikel artikel) {
                 System.out.println("Aktualisierter Artikel: " + artikel);
