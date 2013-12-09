@@ -1,4 +1,4 @@
-package kunde.rest;
+package kundenverwaltung.rest;
 
 /*import static util.Constants.ADD_LINK;
 import static util.Constants.FIRST_LINK;

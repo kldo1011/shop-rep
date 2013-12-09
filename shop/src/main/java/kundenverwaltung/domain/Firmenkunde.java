@@ -1,4 +1,4 @@
-package kunde.domain;
+package kundenverwaltung.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
