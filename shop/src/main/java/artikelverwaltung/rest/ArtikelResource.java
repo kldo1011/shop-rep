@@ -1,5 +1,5 @@
 package artikelverwaltung.rest;
-
+/*
 import static util.Constants.SELF_LINK;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.APPLICATION_XML;
@@ -41,9 +41,9 @@ import util.rest.UriHelper;
 @Path("/artikel")
 @Produces({ APPLICATION_JSON, APPLICATION_XML + ";qs=0.75", TEXT_XML + ";qs=0.5" })
 @Consumes
-// @Log
+// @Log*/
 public class ArtikelResource {
-        @Context
+        /*@Context
         private UriInfo uriInfo;
       
         
@@ -117,6 +117,6 @@ public class ArtikelResource {
         @Produces
         public void updateArtikel(Artikel artikel) {
                 as.updateArtikel(artikel);
-        }
+        }*/
 
 }
