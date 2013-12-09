@@ -9,22 +9,15 @@ import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
-
-
 import artikelverwaltung.domain.*;
 
 
 @XmlRootElement
 public class Position implements Serializable {
 
-               
+                private static final long serialVersionUID = 2640612708567145520L;
 
-                /**
-	 * 
-	 */
-	private static final long serialVersionUID = -2357127410840262033L;
-
-				@Id
+                @Id
                 @GeneratedValue
                 @Basic(optional = false)
         private long id;

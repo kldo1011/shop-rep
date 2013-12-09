@@ -4,8 +4,12 @@ import static util.Constants.SELF_LINK;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.APPLICATION_XML;
 import static javax.ws.rs.core.MediaType.TEXT_XML;
+
+
 import java.net.URI;
 import java.util.List;
+
+
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
@@ -23,6 +27,7 @@ import javax.ws.rs.core.UriInfo;
 
 import artikelverwaltung.domain.*;
 import artikelverwaltung.service.ArtikelService;
+
 import util.rest.NotFoundException;
 import util.rest.UriHelper;
 

@@ -30,14 +30,10 @@ import bestellverwaltung.domain.Bestellung;
         @Type(value = Privatkunde.class, name = AbstractKunde.PRIVATKUNDE),
         @Type(value = Firmenkunde.class, name = AbstractKunde.FIRMENKUNDE) })
 public abstract class AbstractKunde implements Serializable {
+        private static final long serialVersionUID = 7401524595142572933L;
         
         
-        
-        /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1159067510416647514L;
-		public static final String PRIVATKUNDE = "P";
+        public static final String PRIVATKUNDE = "P";
         public static final String FIRMENKUNDE = "F";
         
         //Pattern mit UTF-8 (statt Latin-1 bzw. ISO-8859-1) Schreibweise fuer Umlaute:

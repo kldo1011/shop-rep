@@ -16,9 +16,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import kundenverwaltung.domain.AbstractKunde;
 
-/**
-* @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
-*/
+
 @Entity
 @XmlRootElement
 public class Bestellung implements Serializable {

@@ -1,5 +1,4 @@
 package kundenverwaltung.rest;
-
 import static util.Constants.ADD_LINK;
 import static util.Constants.FIRST_LINK;
 import static util.Constants.LAST_LINK;
@@ -34,7 +33,8 @@ import javax.ws.rs.core.UriInfo;
 
 import bestellverwaltung.domain.Bestellung;
 import bestellverwaltung.rest.BestellungResource;
-//import de.shop.bestellverwaltung.service.BestellungService;
+import bestellverwaltung.service.BestellungService;
+
 import kundenverwaltung.domain.AbstractKunde;
 import kundenverwaltung.service.KundeService;
 import util.rest.UriHelper;
@@ -58,8 +58,8 @@ public class KundeResource {
         @Inject
         private KundeService ks;
         
-        //@Inject
-        //private BestellungService bs;
+        @Inject
+        private BestellungService bs;
         
         @Inject
         private BestellungResource bestellungResource;
@@ -173,17 +173,20 @@ public class KundeResource {
         @Path("{id:[1-9][0-9]*}/bestellungen")
         public Response findBestellungenByKundeId(@PathParam("id") Long kundeId) {
                 final AbstractKunde kunde = ks.findKundeById(kundeId);
-                final List<Bestellung> bestellungen = null;
-                /*bs.findBestellungenByKunde(kunde);
-                if (bestellungen.isEmpty()) {
-                        throw new NotFoundException("Zur ID " + kundeId + " wurden keine Bestellungen gefunden");
+                if (kunde == null) {
+                        throw new NotFoundException("Kein Kunde mit " + kundeId + "Kundennummer gefunden");
                 }
-                if(bestellungen!=null) {
+                final List<Bestellung> bestellungen = bs.findBestellungenByKunde(kunde);
+                
+                /*if (bestellungen.isEmpty()) {
+                        throw new NotFoundException("Zur ID " + kundeId + " wurden keine Bestellungen gefunden");
+                }*/
+                if (bestellungen != null) {
                  //URIs innerhalb der gefundenen Bestellungen anpassen
                 for (Bestellung bestellung : bestellungen) {
                         bestellungResource.setStructuralLinks(bestellung, uriInfo);
                 }
-                }*/
+                }
                 return Response.ok(new GenericEntity<List<Bestellung>>(bestellungen) { })
                        .links(getTransitionalLinksBestellungen(bestellungen, kunde, uriInfo))
                        .build();

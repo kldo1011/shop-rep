@@ -11,6 +11,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+
+
 @Entity
 public class Artikel {
 
@@ -21,7 +23,7 @@ public class Artikel {
         
         @NotNull(message = "{artikelverwaltung.artikel.bezeichnung.notnull}")
         @Size(min = 2, max = 50, message = "{artikelverwaltung.artikel.bezeichnung.length}")
-        @Pattern(regexp = "[A-Z\u00C4\u00D6\u00DC][-A-Za-z0-9\u00E4\u00F6\u00FC\u00DF\u0020]+", 
+        @Pattern(regexp = "[A-Z\u00C4\u00D6\u00DC][-A-Za-z0-9\u00E4\u00F6\u00FC\u00DF\u0020]+",
                         message = "{artikelverwaltung.artikel.bezeichnung.pattern}")
         private String bezeichnung;
         
@@ -58,4 +60,8 @@ public class Artikel {
                 return "Artikel [id=" + id + ", bezeichnung=" + bezeichnung
                                 + ", preis=" + preis + "]";
         }
+        
+        
+        
+        
 }

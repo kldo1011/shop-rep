@@ -11,18 +11,16 @@ import artikelverwaltung.domain.Artikel;
 import util.interceptor.Log;
 import util.Mock;
 
-/**
-* @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
-*/
+
 @Dependent
 @Log
 public class ArtikelService implements Serializable {
-        
+
         
         /**
 	 * 
 	 */
-	private static final long serialVersionUID = 3999583827375620473L;
+	private static final long serialVersionUID = 1492599939611967541L;
 		private static final int MAX_ID = 10;
 
         @NotNull(message = "{artikel.notFound.id}")
