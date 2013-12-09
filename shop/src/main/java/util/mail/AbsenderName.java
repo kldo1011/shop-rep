@@ -1,4 +1,4 @@
-/*package mail;
+/*package util.mail;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;
@@ -13,9 +13,10 @@ import javax.inject.Qualifier;
 /**
 * @author <a href="mailto:Juergen.Zimmermann@HS-Karlsruhe.de">J&uuml;rgen Zimmermann</a>
 */
-/*@Qualifier
+/*
+@Qualifier
 @Target({ FIELD, PARAMETER })
 @Retention(RUNTIME)
 @Documented
-public @interface AbsenderMail {
+public @interface AbsenderName {
 }*/
